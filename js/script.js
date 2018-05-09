@@ -1,6 +1,6 @@
-const data = (function(){
+let arr = [{one: "milk"}, {two: "cookies"}];
+const data = (function(arr){
 	if(localStorage.getItem("words") == null){
-		let arr = [{one: "milk"}, {two: "cookies"}];
 		arr = JSON.stringify(arr);
 		localStorage.setItem("words", arr);
 
@@ -8,10 +8,10 @@ const data = (function(){
 	}else{
 		let content = localStorage.getItem("words");
 		content = JSON.parse(content);
-		content.push({three: "peanuts"});
+		content.push({three: "peanuts"}, {four: "cards"});
 		content = JSON.stringify(content)
 		localStorage.setItem("words", content);
 	}
 
 
-})();
+})(arr);

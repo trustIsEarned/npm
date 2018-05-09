@@ -1,3 +1,4 @@
+let me = [];
 const data = (function(){
 	if(localStorage.getItem("words") == null){
 		let arr = [{one: "milk"}, {two: "cookies"}];
